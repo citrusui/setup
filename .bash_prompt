@@ -1,0 +1,78 @@
+#!/usr/bin/env bash
+
+alias ls="command ls --color"
+export LS_COLORS='no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.ogg=01;35:*.mp3=01;35:*.wav=01;35:'
+
+if [[ $COLORTERM = gnome-* && $TERM = xterm ]] && infocmp gnome-256color >/dev/null 2>&1; then
+	export TERM='gnome-256color';
+elif infocmp xterm-256color >/dev/null 2>&1; then
+	export TERM='xterm-256color';
+fi;
+
+prompt() {
+	local s='';
+	local branchName='';
+
+	if [ $(git rev-parse --is-inside-work-tree &>/dev/null; echo "${?}") == '0' ]; then
+
+		if [ "$(git rev-parse --is-inside-git-dir 2> /dev/null)" == 'false' ]; then
+
+			git update-index --really-refresh -q &>/dev/null;
+
+			if ! $(git diff --quiet --ignore-submodules --cached); then
+				s+='+';
+			fi;
+
+			if ! $(git diff-files --quiet --ignore-submodules --); then
+				s+='!';
+			fi;
+
+			if [ -n "$(git ls-files --others --exclude-standard)" ]; then
+				s+='?';
+			fi;
+
+			if $(git rev-parse --verify refs/stash &>/dev/null); then
+				s+='$';
+			fi;
+
+		fi;
+
+		branchName="$(git symbolic-ref --quiet --short HEAD 2> /dev/null || \
+			git rev-parse --short HEAD 2> /dev/null || \
+			echo '(unknown)')";
+
+		[ -n "${s}" ] && s=" [${s}]";
+
+		echo -e "${1}${branchName}${2}${s}";
+	else
+		return;
+	fi;
+}
+
+tput sgr0;
+reset=$(tput sgr0);
+blue=$(tput setaf 32);
+green=$(tput setaf 34);
+orange=$(tput setaf 208);
+red=$(tput setaf 197);
+violet=$(tput setaf 97);
+white=$(tput setaf 255);
+
+if [[ "${USER}" == "root" ]]; then
+	userStyle="${red}";
+else
+	userStyle="${violet}";
+fi;
+
+PS1="\[\033[1;37m\]";
+PS1+="\n";
+PS1+="\[${userStyle}\]\u ";
+PS1+="\[${green}\]\w";
+PS1+="\$(prompt \" \[${blue}\]\" \"\[${orange}\]\")";
+PS1+="\[${white}\]\n";
+
+if [[ "${USER}" == "root" ]]; then
+	PS1+="# \[${reset}\]";
+else
+	PS1+="$ \[${reset}\]";
+fi;
