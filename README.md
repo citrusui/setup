@@ -5,13 +5,21 @@ A minimal fork of [mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotf
 ## What's Inside
 
 [`.bash_profile`](https://github.com/citrusui/dotfiles/blob/master/.bash_profile): Sets case-insensitivity, appends to .bash_history, autocorrects typos, and loads .bash_prompt.
+
 [`.bash_prompt`](https://github.com/citrusui/dotfiles/blob/master/.bash_prompt): Additional color and functionality to the current prompt.
+
 [`.bashrc`](https://github.com/citrusui/dotfiles/blob/master/.bashrc): Sources .bash_profile.
+
 [`.editorconfig`](https://github.com/citrusui/dotfiles/blob/master/.editorconfig): Settings for your favorite text editor.
+
 [`.gitignore`](https://github.com/citrusui/dotfiles/blob/master/.gitignore): Just a few files to ignore in this repo.
+
 [`.hushlogin`](https://github.com/citrusui/dotfiles/blob/master/.hushlogin): Quiets the login message.
+
 [`LICENSE.md`](https://github.com/citrusui/dotfiles/blob/master/LICENSE.md): The MIT License.
+
 [`README.md`](https://github.com/citrusui/dotfiles/blob/master/README.md): This file.
+
 [`setup.sh`](https://github.com/citrusui/dotfiles/blob/master/setup.sh): Sets up these dotfiles.
 
 ## Install
