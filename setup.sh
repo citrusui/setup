@@ -6,7 +6,7 @@ git pull origin master;
 
 function setup() {
 	rsync --exclude ".git/" \
-		--exclude "README" \
+		--exclude "README.md" \
 		--exclude "LICENSE.md" \
 		--exclude "setup.sh" \
 		-avh --no-perms . ~;
