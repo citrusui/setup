@@ -10,7 +10,7 @@ function setup() {
 		--exclude "LICENSE.md" \
 		--exclude "setup.sh" \
 		-avh --no-perms . ~;
-	source ~/.bash_profile;
+	source ~/.bashrc;
 }
 
 setup;
