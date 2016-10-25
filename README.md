@@ -2,6 +2,10 @@
 
 A stylish command prompt config for Unix systems.
 
+# Preview
+
+![macOS Terminal](https://cloud.githubusercontent.com/assets/9056756/19663763/75b41128-9a0b-11e6-9c57-29d28de61520.png)
+
 ## Install
 
 ```sh
@@ -19,13 +23,15 @@ source dotfiles/setup.sh
 
 [`.editorconfig`](https://github.com/citrusui/dotfiles/blob/master/.editorconfig): Settings for your favorite text editor.
 
+[`.gitconfig`](https://github.com/citrusui/dotfiles/blob/master/.gitconfig): Settings that modify Git color output and functionality.
+
 [`.gitignore`](https://github.com/citrusui/dotfiles/blob/master/.gitignore): Just a few files to ignore in this repo.
 
 [`.hushlogin`](https://github.com/citrusui/dotfiles/blob/master/.hushlogin): Quiets the login message.
 
 [`.macos`](https://github.com/citrusui/dotfiles/blob/master/.macos): Loads `dotfiles.terminal` when on macOS.
 
-[`dotfiles.terminal`](https://github.com/citrusui/dotfiles/blob/master/dotfiles.terminal): The color scheme for Terminal.app in macOS.
+[`dotfiles.terminal`](https://github.com/citrusui/dotfiles/blob/master/dotfiles.terminal): The scheme for Terminal.app.
 
 [`LICENSE.md`](https://github.com/citrusui/dotfiles/blob/master/LICENSE.md): The MIT License.
 
@@ -40,6 +46,22 @@ Simple, just re-run the setup script:
 ```sh
 source dotfiles/setup.sh
 ```
+
+### What terminals are supported?
+
+- macOS Terminal
+- [iTerm2](https://www.iterm2.com)*
+- [Hyper](https://hyper.is)*
+- [GNOME](https://wiki.gnome.org/Apps/Terminal)*
+- [Pantheon](https://launchpad.net/pantheon-terminal)*
+
+An asterisk `*` specifies basic support. Updates to improve support will be released periodically.
+
+If you'd to see your terminal supported, open an [issue](https://github.com/citrusui/dotfiles/issues)!
+
+### 24-bit color support?
+
+It's on my roadmap. If you have any suggestions on ways to implement this, please open a [Pull Request](https://github.com/citrusui/dotfiles/pulls).
 
 ## Credits
 
