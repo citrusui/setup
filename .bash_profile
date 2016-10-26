@@ -1,4 +1,4 @@
-for file in ~/.{bash_prompt,gitconfig}; do
+for file in ~/.{bash_prompt}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
