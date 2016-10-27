@@ -4,13 +4,12 @@ cd "$(dirname "${BASH_SOURCE}")";
 
 git pull origin master;
 
-function setup() {
-  rsync --exclude ".git/" \
+rsync --exclude ".git/" \
   --exclude "README.md" \
   --exclude "LICENSE.md" \
   --exclude "setup.sh" \
   -avh --no-perms . ~;
-  source ~/.bashrc;
+  source .bashrc;
   if [ "$(uname)" == "Darwin" ]; then
     ./.macos
   fi
@@ -20,7 +19,3 @@ function setup() {
     gsettings set org.pantheon.terminal.settings follow-last-tab "true"
     gsettings set org.pantheon.terminal.settings foreground "#fff"
   fi
-}
-
-setup;
-unset setup;
