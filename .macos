@@ -5,8 +5,13 @@ if [ "${CURRENT_PROFILE}" != "${TERM_PROFILE}" ]; then
 	sleep 1;
 	defaults write com.apple.terminal 'Default Window Settings' -string "${TERM_PROFILE}";
 	defaults write com.apple.terminal 'Startup Window Settings' -string "${TERM_PROFILE}";
-  echo "Terminal will now quit for changes to take effect."; sleep 10;
-  killall Terminal
-elif [ "${TERM_PROGRAM}" == "iTerm.app" ]; then
-  open "${HOME}/${TERM_PROFILE}.itermcolors";
+	defaults write com.apple.desktopservices DSDontWriteNetworkStores true
+	defaults write com.apple.finder AppleShowAllFiles YES
+	defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+	defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+	defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+	defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+	defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+	defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+  echo "For changes to take full effect, restart macOS.";
 fi;

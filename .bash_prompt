@@ -9,6 +9,7 @@ else
 fi
 
 alias ls="ls ${colorflag}"
+alias sh="bash"
 alias sudo="sudo "
 
 if [[ $COLORTERM = gnome-* && $TERM = xterm ]] && infocmp gnome-256color >/dev/null 2>&1; then
@@ -59,13 +60,24 @@ prompt() {
 
 tput sgr0;
 reset=$(tput sgr0);
-blue="\e[38;2;68;146;191m"; #4ea5d9
-green="\e[38;2;121;206;128m"; #79ce80
-orange="\e[38;2;255;87;45m"; #ff572d
-red="\e[38;2;224;52;49m"; #e03431
-violet="\e[38;2;87;98;213m"; #5762d5
-white="\e[38;2;249;249;249m"; #f9f9f9
-yellow="\e[38;2;232;227;102m"; #e8e366
+
+if [ "$(echo $TERM_PROGRAM)" == "Apple_Terminal" ]; then
+	blue=$(tput setaf 4);
+  green=$(tput setaf 2);
+  orange=$(tput setaf 32);
+  red=$(tput setaf 2);
+  violet=$(tput setaf 26);
+  white=$(tput setaf 7);
+  yellow=$(tput setaf 220);
+else
+  blue="\e[38;2;68;146;191m"; #4ea5d9
+  green="\e[38;2;121;206;128m"; #79ce80
+  orange="\e[38;2;255;87;45m"; #ff572d
+  red="\e[38;2;224;52;49m"; #e03431
+  violet="\e[38;2;87;98;213m"; #5762d5
+  white="\e[38;2;249;249;249m"; #f9f9f9
+  yellow="\e[38;2;232;227;102m"; #e8e366
+fi
 
 if [[ "${USER}" == "root" ]]; then
 	userStyle="${red}";

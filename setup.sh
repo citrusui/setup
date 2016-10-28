@@ -13,7 +13,7 @@ rsync --exclude ".git/" \
   source .bashrc;
   if [ "$(uname)" == "Darwin" ]; then
     ./.macos
-  elif [ "$(echo $TERM_PROGRAM)" == "iTerm.app"]; then
+  elif [ "$(echo $TERM_PROGRAM)" == "iTerm.app" ]; then
     open dotfiles.itermcolors
   elif [ "$(lsb_release -si)" == "elementary" ]; then
     ./.pantheon

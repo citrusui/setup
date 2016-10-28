@@ -33,6 +33,8 @@ source dotfiles/setup.sh
 
 [`COLORS.md`](https://github.com/citrusui/dotfiles/blob/master/COLORS.md): An explanation for these LSCOLORS.
 
+[`dotfiles.itermcolors`](https://github.com/citrusui/dotfiles/blob/master/dotfiles.terminal): Colorized output for iTerm2.
+
 [`dotfiles.terminal`](https://github.com/citrusui/dotfiles/blob/master/dotfiles.terminal): The scheme for Terminal.app.
 
 [`LICENSE.md`](https://github.com/citrusui/dotfiles/blob/master/LICENSE.md): The MIT License.
@@ -52,22 +54,16 @@ source dotfiles/setup.sh
 ### What terminals are supported?
 
 - macOS Terminal<sup>1</sup>
-- [iTerm2](https://www.iterm2.com)<sup>2</sup>
-- [Hyper](https://hyper.is)<sup>2</sup>
-- [GNOME](https://wiki.gnome.org/Apps/Terminal)<sup>3</sup>
+- [iTerm2](https://www.iterm2.com)
+- [Hyper](https://hyper.is)
+- [GNOME](https://wiki.gnome.org/Apps/Terminal)<sup>2</sup>
 - [Pantheon](https://launchpad.net/pantheon-terminal)
 
 <sup>1</sup> Does not support 24-bit colors.
 
-<sup>2</sup> Basic support. Improvements are in the works.
-
-<sup>3</sup> Basic support. Profiles must be managed through the Terminal app manually.
+<sup>2</sup> Basic support. Profiles must be managed through Gnome Terminal manually.
 
 If you'd to see your terminal supported, open an [issue](https://github.com/citrusui/dotfiles/issues)!
-
-### 24-bit color support?
-
-It's on my roadmap. If you have any suggestions on ways to implement this, please open a [Pull Request](https://github.com/citrusui/dotfiles/pulls).
 
 ## Credits
 
