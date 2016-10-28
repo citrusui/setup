@@ -7,7 +7,7 @@
   upstream = bold cyan
 [color "diff"]
   meta = cyan bold
-  frag = black bold
+  frag = normal bold
   old = red
   new = green
   whitespace = magenta reverse

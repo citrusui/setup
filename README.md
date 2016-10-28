@@ -27,15 +27,19 @@ source dotfiles/setup.sh
 
 [`.gitignore`](https://github.com/citrusui/dotfiles/blob/master/.gitignore): Just a few files to ignore in this repo.
 
-[`.hushlogin`](https://github.com/citrusui/dotfiles/blob/master/.hushlogin): Quiets the login message.
+[`.hushlogin`](https://github.com/citrusui/dotfiles/blob/master/.hushlogin): Suppresses the login message.
+
+[`.hyper.js`](https://github.com/citrusui/dotfiles/blob/master/.hyper.js): Appearance configurations for Hyper.
 
 [`.macos`](https://github.com/citrusui/dotfiles/blob/master/.macos): Loads `dotfiles.terminal` when on macOS.
 
+[`.pantheon`](https://github.com/citrusui/dotfiles/blob/master/.pantheon): Color and functionality settings for Pantheon.
+
 [`COLORS.md`](https://github.com/citrusui/dotfiles/blob/master/COLORS.md): An explanation for these LSCOLORS.
 
-[`dotfiles.itermcolors`](https://github.com/citrusui/dotfiles/blob/master/dotfiles.terminal): Colorized output for iTerm2.
+[`dotfiles.itermcolors`](https://github.com/citrusui/dotfiles/blob/master/dotfiles.itermcolors): Colorized output for iTerm2.
 
-[`dotfiles.terminal`](https://github.com/citrusui/dotfiles/blob/master/dotfiles.terminal): The scheme for Terminal.app.
+[`dotfiles.terminal`](https://github.com/citrusui/dotfiles/blob/master/dotfiles.terminal): Profile scheme for Terminal.app.
 
 [`LICENSE.md`](https://github.com/citrusui/dotfiles/blob/master/LICENSE.md): The MIT License.
 
