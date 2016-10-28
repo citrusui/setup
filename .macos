@@ -5,6 +5,8 @@ if [ "${CURRENT_PROFILE}" != "${TERM_PROFILE}" ]; then
 	sleep 1;
 	defaults write com.apple.terminal 'Default Window Settings' -string "${TERM_PROFILE}";
 	defaults write com.apple.terminal 'Startup Window Settings' -string "${TERM_PROFILE}";
+  echo "Terminal will now quit for changes to take effect."; sleep 10;
+  killall Terminal
+elif [ "${TERM_PROGRAM}" == "iTerm.app" ]; then
+  open "${HOME}/${TERM_PROFILE}.itermcolors";
 fi;
-echo "Terminal will now quit for changes to take effect."; sleep 10;
-killall Terminal

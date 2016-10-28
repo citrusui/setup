@@ -19,3 +19,5 @@
   gpgsign = true
 [diff]
   renames = copies
+[help]
+  autocorrect = 10
