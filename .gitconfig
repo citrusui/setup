@@ -6,15 +6,15 @@
   remote = magenta
   upstream = bold cyan
 [color "diff"]
-  meta = yellow bold
-  frag = cyan bold
-  old = magenta
+  meta = cyan bold
+  frag = black bold
+  old = red
   new = green
-  whitespace = red reverse
+  whitespace = magenta reverse
 [color "status"]
-  added = yellow
-  changed = green
-  untracked = cyan
+  added = green
+  changed = yellow
+  untracked = red
 [commit]
   gpgsign = true
 [diff]

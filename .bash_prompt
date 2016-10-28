@@ -62,13 +62,13 @@ tput sgr0;
 reset=$(tput sgr0);
 
 if [ "$(echo $TERM_PROGRAM)" == "Apple_Terminal" ]; then
-	blue=$(tput setaf 4);
+  blue=$(tput setaf 4);
   green=$(tput setaf 2);
-  orange=$(tput setaf 32);
+  orange=$(tput setaf 9);
   red=$(tput setaf 2);
-  violet=$(tput setaf 26);
+  violet=$(tput setaf 12);
   white=$(tput setaf 7);
-  yellow=$(tput setaf 220);
+  yellow=$(tput setaf 3);
 else
   blue="\e[38;2;68;146;191m"; #4ea5d9
   green="\e[38;2;121;206;128m"; #79ce80
