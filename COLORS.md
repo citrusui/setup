@@ -1,4 +1,4 @@
- # LSCOLORS
+# LSCOLORS
 
 Generated from http://geoff.greer.fm/lscolors/.
 

@@ -65,7 +65,7 @@ if [ "$(echo $TERM_PROGRAM)" == "Apple_Terminal" ]; then
   blue=$(tput setaf 4);
   green=$(tput setaf 2);
   orange=$(tput setaf 9);
-  red=$(tput setaf 2);
+  red=$(tput setaf 1);
   violet=$(tput setaf 12);
   white=$(tput setaf 7);
   yellow=$(tput setaf 3);

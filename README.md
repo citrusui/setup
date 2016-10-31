@@ -4,7 +4,10 @@ A stylish command prompt config for Unix systems.
 
 # Preview
 
-![macOS Terminal](https://cloud.githubusercontent.com/assets/9056756/19663763/75b41128-9a0b-11e6-9c57-29d28de61520.png)
+![macOS Terminal](apple.png)
+![Hyper](hyper.png)
+![iTerm2](iterm2.png)
+![Pantheon Terminal](pantheon.png)
 
 ## Install
 
