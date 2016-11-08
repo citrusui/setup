@@ -16,7 +16,7 @@ module.exports = {
     foregroundColor: '#f9f9f9',
 
     // terminal background color
-    backgroundColor: '#40484f',
+    backgroundColor: '#292e33',
 
     // border color (window, tabs)
     borderColor: '#292e33',
@@ -34,7 +34,7 @@ module.exports = {
     // including the 6 x 6 color cubes and the grayscale map, just provide
     // an array here instead of a color map object
     colors: {
-      black: '#000',
+      black: '#40484f',
       red: '#e03431',
       green: '#79ce80',
       yellow: '#e8e366',
@@ -42,7 +42,7 @@ module.exports = {
       magenta: '#e031a8',
       cyan: '#4ed4d8',
       white: '#f9f9f9',
-      lightBlack: '#000',
+      lightBlack: '#40484f',
       lightRed: '#e03431',
       lightGreen: '#79ce80',
       lightYellow: '#e8e366',

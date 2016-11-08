@@ -7,7 +7,6 @@ A stylish command prompt config for Unix systems.
 ![macOS Terminal](apple.png)
 ![Hyper](hyper.png)
 ![iTerm2](iterm2.png)
-![Pantheon Terminal](pantheon.png)
 
 ## Install
 
@@ -38,15 +37,9 @@ source dotfiles/setup.sh
 
 [`.pantheon`](https://github.com/citrusui/dotfiles/blob/master/.pantheon): Color and functionality settings for Pantheon.
 
-[`COLORS.md`](https://github.com/citrusui/dotfiles/blob/master/COLORS.md): An explanation for these LSCOLORS.
-
 [`dotfiles.itermcolors`](https://github.com/citrusui/dotfiles/blob/master/dotfiles.itermcolors): Colorized output for iTerm2.
 
 [`dotfiles.terminal`](https://github.com/citrusui/dotfiles/blob/master/dotfiles.terminal): Profile scheme for Terminal.app.
-
-[`LICENSE.md`](https://github.com/citrusui/dotfiles/blob/master/LICENSE.md): The MIT License.
-
-[`README.md`](https://github.com/citrusui/dotfiles/blob/master/README.md): This file.
 
 [`setup.sh`](https://github.com/citrusui/dotfiles/blob/master/setup.sh): Sets up these dotfiles.
 
@@ -65,10 +58,13 @@ source dotfiles/setup.sh
 - [Hyper](https://hyper.is)
 - [GNOME](https://wiki.gnome.org/Apps/Terminal)<sup>2</sup>
 - [Pantheon](https://launchpad.net/pantheon-terminal)
+- [Windows Bash](https://msdn.microsoft.com/commandline/wsl/about)<sup>3</sup>
 
 <sup>1</sup> Does not support 24-bit colors.
 
 <sup>2</sup> Basic support. Profiles must be managed through Gnome Terminal manually.
+
+<sup>3</sup> 24-bit color support will be available in [future Windows builds](https://blogs.msdn.microsoft.com/commandline/2016/09/22/24-bit-color-in-the-windows-console/).
 
 If you'd to see your terminal supported, open an [issue](https://github.com/citrusui/dotfiles/issues)!
 

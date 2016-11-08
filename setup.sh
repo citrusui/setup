@@ -6,9 +6,7 @@ git pull origin master;
 
 rsync --exclude ".git/" \
 --exclude "*.png" \
---exclude "COLORS.md" \
---exclude "README.md" \
---exclude "LICENSE.md" \
+--exclude "*.md" \
 --exclude "setup.sh" \
 -avh --no-perms . ~;
 source .bashrc;
