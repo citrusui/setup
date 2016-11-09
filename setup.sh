@@ -5,6 +5,7 @@ cd "$(dirname "${BASH_SOURCE}")";
 git pull origin master;
 
 rsync --exclude ".git/" \
+--exclude ".travis.yml" \
 --exclude "*.png" \
 --exclude "*.md" \
 --exclude "setup.sh" \

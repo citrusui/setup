@@ -1,0 +1,11 @@
+os:
+ - linux
+ - osx
+sudo: required
+language: node_js
+node_js:
+ - "6"
+script: 
+ - source setup.sh
+notifications:
+  email: false
