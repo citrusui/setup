@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 cd "$(dirname "${BASH_SOURCE}")";
 
@@ -6,9 +6,8 @@ git pull origin master;
 
 rsync --exclude ".git/" \
 --exclude ".travis.yml" \
---exclude "*.png" \
 --exclude "*.md" \
---exclude "setup.sh" \
+--exclude "docs/" \
 -avh --no-perms . ~;
 source .bashrc;
 if [ "$(uname)" == "Darwin" ]; then

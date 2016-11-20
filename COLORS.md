@@ -17,5 +17,7 @@ cx (dir writable to others, no sticky bit) = green foreground, default backgroun
 ```
 
 Man pages for `ls`:
+
 - [BSD (Apple)](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man1/ls.1.html)
+
 - [Linux (Ubuntu)](http://manpages.ubuntu.com/manpages/xenial/en/man1/ls.1.html)

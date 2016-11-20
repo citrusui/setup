@@ -1,7 +1,23 @@
+# Jekyll
+
+.sass-cache/
+_site/
+.jekyll-metadata
+
+# macOS
+
 ._*
-.extra
-.DS_Store
-.Spotlight-V100
-.Trashes
+*.DS_Store
+
+# Package managers
+
+bower_components/
+node_modules/
+*.log
+npm-debug.log*
+
+# Windows
+
+ehthumbs.db
 Desktop.ini
 Thumbs.db
