@@ -25,7 +25,7 @@ source dotfiles/setup.sh
 
 ## Supported terminals
 
-- [GNOME]<sup>1</sup>
+- GNOME<sup>1</sup>
 - [Hyper](https://hyper.is)
 - [iTerm2](https://www.iterm2.com)
 - Pantheon
