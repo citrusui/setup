@@ -1,10 +1,14 @@
-# Avery's dotfiles
+# Avery's setup
 
-Intuitive command line defaults for Unix systems.
+Fancy and intuitive system defaults. I use this whenever I setup a new computer.
 
-**Heads up:** These preferences may not work for you — and that's okay! Just fork this repo and add or remove what you do or don't want.
+## Disclaimer
+
+As this project is still unstable, anything is prone to suddenly break or disappear. You should review and/or fork this repository before attempting to install this setup. **It is not intended for general-purpose use.**
 
 # Preview
+
+Here's what it looks like in a few popular terminal clients:
 
 ![Hyper](https://cloud.githubusercontent.com/assets/9056756/20459995/44101458-aea3-11e6-8d86-56e8d4551831.PNG)
 ![iTerm2](https://cloud.githubusercontent.com/assets/9056756/20459993/440e7c88-aea3-11e6-87e4-2785a2b5f564.PNG)
@@ -13,14 +17,14 @@ Intuitive command line defaults for Unix systems.
 ## Install
 
 ```sh
-git clone https://github.com/citrusui/dotfiles
-source dotfiles/setup.sh
+git clone https://github.com/citrusui/setup
+source setup/setup.sh
 ```
 
 To update, just re-run the setup script:
 
 ```sh
-source dotfiles/setup.sh
+source setup/setup.sh
 ```
 
 ## Supported terminals
@@ -40,8 +44,8 @@ source dotfiles/setup.sh
 
 <sup>3</sup> 24-bit color support will be available in a [future Windows release](https://blogs.msdn.microsoft.com/commandline/2016/09/22/24-bit-color-in-the-windows-console/).
 
-If you'd to see your terminal added, open an [issue](https://github.com/citrusui/dotfiles/issues)!
+If you'd to see your terminal added, open an [issue](https://github.com/citrusui/setup/issues)!
 
 ## Credits
 
-A huge thanks to Mathias Bynens and contributors for the popular [`dotfiles`](https://github.com/mathiasbynens/dotfiles) repo, from which this is based off of!
+A huge thanks to Mathias Bynens and contributors for the popular [`dotfiles`](https://github.com/mathiasbynens/dotfiles) repo, from which this is based off of.

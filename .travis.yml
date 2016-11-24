@@ -4,8 +4,8 @@ os:
 sudo: required
 language: node_js
 node_js:
- - "6"
-script: 
+ - "7"
+script:
  - source setup.sh
 notifications:
   email: false
