@@ -10,7 +10,7 @@ function checkTools() {
 }
 checkTools
 cd "$(dirname "${BASH_SOURCE}")";
-echo -e "\n\e[1;34mChecking for updates to Setup...\e[0m\n"
+echo -e "\nChecking for updates to Setup...\n"
 git pull origin master;
 rsync --exclude ".git/" \
 --exclude ".travis.yml" \
@@ -25,7 +25,7 @@ $HOME/.$NVM/install.sh
 if [ "$(uname)" == "Darwin" ]; then
   ./.macos
 elif [ "$(echo $TERM_PROGRAM)" == "iTerm.app" ]; then
-  open dotfiles.itermcolors
+  open setup.itermcolors
 elif [ "$(lsb_release -si)" == "elementary" ]; then
   ./.pantheon
 fi

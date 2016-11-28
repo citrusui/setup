@@ -1,5 +1,4 @@
 #!/bin/bash
-
 gsettings set org.pantheon.terminal.settings allow-bold "true"
 gsettings set org.pantheon.terminal.settings alt-changes-tab "true"
 gsettings set org.pantheon.terminal.settings audible-bell "true"
@@ -18,4 +17,3 @@ gsettings set org.pantheon.terminal.settings shell "bash"
 gsettings set org.pantheon.terminal.settings scrollback-lines "-1"
 gsettings set org.pantheon.terminal.settings tab-bar-behavior "Always Show Tabs"
 gsettings set org.pantheon.terminal.settings unsafe-paste-alert "true"
-echo "Restart Terminal for changes to take full effect."
