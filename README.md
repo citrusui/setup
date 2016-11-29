@@ -11,11 +11,19 @@ As this project is still unstable, anything is prone to suddenly break or disapp
 Here's what it looks like in a few popular terminal clients:
 
 <div style="text-align:center">
+
 ![Hyper](https://cloud.githubusercontent.com/assets/9056756/20459995/44101458-aea3-11e6-8d86-56e8d4551831.PNG)
+
 ![iTerm2](https://cloud.githubusercontent.com/assets/9056756/20459993/440e7c88-aea3-11e6-87e4-2785a2b5f564.PNG)
+
 ![macOS Terminal](https://cloud.githubusercontent.com/assets/9056756/20459994/440f5478-aea3-11e6-94a4-05a86c8f8734.PNG)
+
 ![Pantheon Terminal](https://cloud.githubusercontent.com/assets/9056756/20686128/5f4743ac-b585-11e6-8364-03c64f6bae96.png)
-![Windows Bash](https://cloud.githubusercontent.com/assets/9056756/20686009/d2289070-b584-11e6-92e8-635d6fe0b44c.png)</div>
+
+![Windows Bash](https://cloud.githubusercontent.com/assets/9056756/20686009/d2289070-b584-11e6-92e8-635d6fe0b44c.png)
+
+</div>
+
 ## Install
 
 ```sh
