@@ -38,8 +38,8 @@ source setup/setup.sh
 - GNOME<sup>1</sup>
 - [Hyper](https://hyper.is)
 - [iTerm2](https://www.iterm2.com)
+- macOS Terminal<sup>2</sup>
 - Pantheon
-- Terminal.app<sup>2</sup>
 - [Windows Bash](https://msdn.microsoft.com/commandline/wsl/about)<sup>3</sup>
 
 #### Caveats

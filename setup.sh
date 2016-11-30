@@ -1,10 +1,11 @@
-#!/bin/bash
+#!/usr/bin/env bash
 export NVM=nvm
 function checkTools() {
-  if [ ! "$(which git)" ] || [ ! "$(which make)" ]; then
-    echo "Git and Make are required."
+  if [ ! "$(which git)" ]; then
+    echo "Git is required."
     echo "Please install them from your package manager."
     echo "If you are on macOS, run xcode-select --install."
+    sleep 5;
     exit 1;
   fi
 }

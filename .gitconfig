@@ -1,5 +1,5 @@
 [core]
-  editor = "atom --wait"
+  editor = "atom --wait" # Use Atom for Git commits
   excludesfile = ~/.gitignore # Set as global gitignore
 
 # Various status color overrides

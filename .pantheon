@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 gsettings set org.pantheon.terminal.settings allow-bold "true"
 gsettings set org.pantheon.terminal.settings alt-changes-tab "true"
 gsettings set org.pantheon.terminal.settings audible-bell "true"

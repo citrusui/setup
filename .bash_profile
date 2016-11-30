@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Export ~/.bash_prompt and ~/.extra
 
