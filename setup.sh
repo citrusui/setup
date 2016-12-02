@@ -27,6 +27,8 @@ if [ "$(uname)" == "Darwin" ]; then
   ./.macos
 elif [ "$(echo $TERM_PROGRAM)" == "iTerm.app" ]; then
   open setup.itermcolors
+elif [ "$(which gnome-session)" ]; then
+  gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click "true"
 elif [ "$(lsb_release -si)" == "elementary" ]; then
   ./.pantheon
 fi
