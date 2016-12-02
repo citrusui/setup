@@ -4,7 +4,7 @@
 
 # Preview
 
-![citrusui Terminal (Pantheon)](https://cloud.githubusercontent.com/assets/9056756/20819917/a1bf69a8-b805-11e6-82c7-bd6ec038144d.png)
+![citrusui Terminal (Pantheon)](https://cloud.githubusercontent.com/assets/9056756/20851411/4a24f6d2-b8ae-11e6-848c-6878d5d064f6.png)
 
 ## Install
 
@@ -25,15 +25,13 @@ source setup/setup.sh
 - [iTerm2](https://www.iterm2.com)
 - macOS Terminal<sup>2</sup>
 - Pantheon
-- [Windows Bash<sup>3</sup>](https://msdn.microsoft.com/commandline/wsl/about)
+- [Windows Bash](https://msdn.microsoft.com/commandline/wsl/about)
 
 #### Notes
 
-1: Profiles must be managed through Gnome Terminal manually.
+1: Profiles must be managed manually.
 
 2: Does not support 24-bit colors.
-
-3: 24-bit color support will be available in a [future Windows release.](https://blogs.msdn.microsoft.com/commandline/2016/09/22/24-bit-color-in-the-windows-console/)
 
 If you'd to see your terminal added, open an [issue!](https://github.com/citrusui/setup/issues)
 

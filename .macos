@@ -10,11 +10,8 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 defaults write com.apple.finder AppleShowAllFiles YES # Show all files in Finder
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true # Show all file extensions
 
-# Disable smart dashes (—) and smart quotes (“”)
-
-defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
-defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
-
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false # Disable smart dashes
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false # Disable smart quotes
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false # Disable autocorrect
 
 # Enable tap-to-click

@@ -20,7 +20,7 @@
   changed = yellow
   untracked = red
 [commit]
-  gpgsign = true # Use GPG signing
+  gpgsign = true # Force GPG signing
 [diff]
   renames = copies # Detect file copies as renames
 [help]

@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+gsettings set org.gtk.Settings.FileChooser sort-directories-first "true" # Show directories before files
+gsettings set org.gtk.Settings.FileChooser show-hidden "true" # Show hidden files
+
+gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click "true" # Enable tap-to-click
+
+gsettings set org.gnome.Terminal.Legacy.Settings new-terminal-mode "tab" # Open new terminals as a tab
+
+# 12-hour date format
+
+gsettings set org.gnome.desktop.interface clock-format "12h"
+gsettings set org.gtk.Settings.FileChooser clock-format "12h"

@@ -51,7 +51,7 @@ prompt() {
 tput sgr0;
 reset=$(tput sgr0);
 
-# Terminal.app color fallback
+# macOS Terminal color fallback
 
 if [ "$(echo $TERM_PROGRAM)" == "Apple_Terminal" ]; then
   blue=$(tput setaf 4);
@@ -78,7 +78,7 @@ else
 fi;
 if [[ "${SSH_TTY}" ]]; then
   userStyle="${yellow}"; # SSH is pretty neat
-fi; # We're done, woohoo!
+fi; # `apt-get moo`
 
 # Apply prompt
 
@@ -89,7 +89,7 @@ PS1+="\[${green}\]\w";
 PS1+="\$(prompt \" \[${blue}\]\" \"\[${orange}\]\")";
 PS1+="\[${white}\]\n";
 if [[ "${USER}" == "root" ]]; then
-  PS1+="# \[${reset}\]"; # Display octothorp
+  PS1+="# \[${reset}\]"; # Display octothorp (#)
 else
-  PS1+="$ \[${reset}\]"; # Display dollar sign
+  PS1+="$ \[${reset}\]"; # Display dollar sign ($)
 fi;

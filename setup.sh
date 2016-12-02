@@ -11,7 +11,7 @@ function checkTools() {
 }
 checkTools
 cd "$(dirname "${BASH_SOURCE}")";
-echo -e "\nChecking for updates to Setup...\n"
+echo -e "\nPulling updates...\n"
 git pull origin master;
 rsync --exclude ".git/" \
 --exclude ".travis.yml" \
@@ -28,7 +28,7 @@ if [ "$(uname)" == "Darwin" ]; then
 elif [ "$(echo $TERM_PROGRAM)" == "iTerm.app" ]; then
   open setup.itermcolors
 elif [ "$(which gnome-session)" ]; then
-  gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click "true"
+  ./.gnome
 elif [ "$(lsb_release -si)" == "elementary" ]; then
   ./.pantheon
 fi
