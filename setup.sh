@@ -21,8 +21,8 @@ source .bashrc;
 if [ ! -d "$HOME/.$NVM" ]; then
   echo "Grabbing $NVM..."
   git clone https://github.com/creationix/$NVM $HOME/.$NVM
+  $HOME/.$NVM/install.sh
 fi
-$HOME/.$NVM/install.sh
 if [ "$(uname)" == "Darwin" ]; then
   ./.macos
 elif [ "$(echo $TERM_PROGRAM)" == "iTerm.app" ]; then
