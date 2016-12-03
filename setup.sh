@@ -28,7 +28,7 @@ if [ "$(uname)" == "Darwin" ]; then
 elif [ "$(echo $TERM_PROGRAM)" == "iTerm.app" ]; then
   open setup.itermcolors
 elif [ "$(which gnome-session)" ]; then
-  ./.gnome
+  ./.gtk
 elif [ "$(lsb_release -si)" == "elementary" ]; then
   ./.pantheon
 fi
