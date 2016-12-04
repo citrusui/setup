@@ -1,0 +1,13 @@
+"*":
+  autosave:
+    enabled: true
+  core:
+    openEmptyEditorOnStart: false
+    telemetryConsent: "no"
+  editor:
+    fontFamily: "-apple-system, BlinkMacSystemFont, \"Roboto Mono\", \"Segoe UI\""
+    showIndentGuide: true
+    softWrap: true
+    zoomFontWhenCtrlScrolling: false
+  welcome:
+    showOnStartup: false
