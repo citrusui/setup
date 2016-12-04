@@ -25,10 +25,13 @@ if [ ! -d "$HOME/.$NVM" ]; then
 fi
 if [ "$(uname)" == "Darwin" ]; then
   ./.macos
-elif [ "$(echo $TERM_PROGRAM)" == "iTerm.app" ]; then
+fi
+if [ "$(echo $TERM_PROGRAM)" == "iTerm.app" ]; then
   open setup.itermcolors
-elif [ "$(which gnome-session)" ]; then
+fi
+if [ "$(which gnome-session)" ]; then
   ./.gtk
-elif [ "$(lsb_release -si)" == "elementary" ]; then
+fi
+if [ "$(which pantheon-greeter)" ]; then
   ./.pantheon
 fi

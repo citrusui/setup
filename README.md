@@ -1,6 +1,6 @@
 # Avery's setup
 
-**Disclaimer:** These settings are not meant for general-purpose use. Please review and/or fork this repository before attempting to install this setup. You have been warned!
+**Disclaimer:** These settings are not meant for general-purpose use. If you'd like to use these configurations, consider reviewing and/or forking this repository.
 
 # Preview
 
@@ -32,8 +32,6 @@ source setup/setup.sh
 1: Profiles must be managed manually.
 
 2: Does not support 24-bit colors.
-
-If you'd to see your terminal added, open an [issue!](https://github.com/citrusui/setup/issues)
 
 ## License
 
