@@ -1,4 +1,5 @@
 [core]
+  autocrlf = input # Use LF line endings
   editor = "atom --wait" # Use Atom for Git commits
   excludesfile = ~/.gitignore # Set as global gitignore
 
