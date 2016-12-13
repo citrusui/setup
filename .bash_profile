@@ -2,7 +2,7 @@
 
 # Export ~/.bash_prompt and ~/.extra
 
-for file in ~/.{bash_prompt,extra}; do
+for file in ~/.{bash_prompt,bashrc,extra}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
