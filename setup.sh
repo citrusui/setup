@@ -11,7 +11,7 @@ function checkTools() {
 }
 checkTools
 cd "$(dirname "${BASH_SOURCE}")";
-echo -e "\nPulling updates...\n"
+echo "\nPulling updates...\n"
 git pull origin master;
 rsync --exclude ".git/" \
 --exclude ".travis.yml" \
