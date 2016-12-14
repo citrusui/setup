@@ -5,7 +5,7 @@
     openEmptyEditorOnStart: false
     telemetryConsent: "no"
   editor:
-    fontFamily: "-apple-system, BlinkMacSystemFont, \"Roboto Mono\", \"Segoe UI\""
+    fontFamily: "Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\""
     showIndentGuide: true
     softWrap: true
     zoomFontWhenCtrlScrolling: false

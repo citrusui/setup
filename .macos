@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-osascript -e 'tell application "System Preferences" to quit' # Prevent settings from being overwritten
+osascript -e "tell application \"System Preferences\" to quit" # Prevent settings from being overwritten
 
 # Do not write .DS_Store files on networks or USB drives
 
@@ -28,10 +28,10 @@ defaults write com.apple.AppleMultitouchTrackpad Dragging -int 1
 # Set Terminal profile
 
 TERM_PROFILE=setup;
-CURRENT_PROFILE="$(defaults read com.apple.terminal 'Default Window Settings')";
+CURRENT_PROFILE="$(defaults read com.apple.terminal \"Default Window Settings\")";
 if [ "${CURRENT_PROFILE}" != "${TERM_PROFILE}" ]; then
   open "${HOME}/${TERM_PROFILE}.terminal";
   sleep 1;
-  defaults write com.apple.terminal 'Default Window Settings' -string "${TERM_PROFILE}";
-  defaults write com.apple.terminal 'Startup Window Settings' -string "${TERM_PROFILE}";
+  defaults write com.apple.terminal \"Default Window Settings\" -string "${TERM_PROFILE}";
+  defaults write com.apple.terminal \"Startup Window Settings\" -string "${TERM_PROFILE}";
 fi;
