@@ -7,7 +7,7 @@ gsettings set org.pantheon.desktop.gala.appearance button-layout "close,minimize
 # Desktop Hot Corners
 
 gsettings set org.pantheon.desktop.gala.behavior hotcorner-bottomleft "window-overview"
-gsettings set org.pantheon.desktop.gala.behavior hotcorner-topleft "open-launcher"
+gsettings set org.pantheon.desktop.gala.behavior hotcorner-bottomright "window-overview"
 
 gsettings set org.pantheon.desktop.wingpanel.indicators.power show-percentage "true" # Show battery percentage
 
