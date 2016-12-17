@@ -32,7 +32,6 @@ module.exports = {
       lightWhite: "#f9f9f9"
     },
     shell: "bash",
-    shellArgs: ["--login"],
     env: {},
     bell: "SOUND",
     copyOnSelect: true
