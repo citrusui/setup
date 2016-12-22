@@ -20,9 +20,5 @@
   added = green
   changed = yellow
   untracked = red
-[commit]
-  gpgsign = true # Force GPG signing
-[diff]
-  renames = copies # Detect file copies as renames
 [help]
   autocorrect = 10 # Autocorrect misspelled commands after a 1 second delay
