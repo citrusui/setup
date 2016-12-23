@@ -11,7 +11,7 @@ module.exports = {
     borderColor: "#292e33",
     css: "",
     termCSS: "",
-    showHamburgerMenu: "true",
+    showHamburgerMenu: true,
     padding: "12px 14px",
     colors: {
       black: "#40484f",
