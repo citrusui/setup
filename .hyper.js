@@ -8,7 +8,7 @@ module.exports = {
     cursorShape: "BLOCK",
     foregroundColor: "#f9f9f9",
     backgroundColor: "#292e33",
-    borderColor: "#292e33",
+    borderColor: "#40484f",
     css: "",
     termCSS: "",
     showHamburgerMenu: true,
@@ -34,7 +34,8 @@ module.exports = {
     shell: "bash",
     env: {},
     bell: "SOUND",
-    copyOnSelect: true
+    copyOnSelect: true,
+    windowSize: [750, 500],
   },
   plugins: [],
   localPlugins: []
