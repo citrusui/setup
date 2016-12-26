@@ -20,28 +20,26 @@ source setup/setup.sh
 
 # Supported apps
 
-## Terminals
+## Terminal emulators
 
+- [Bash on Ubuntu on Windows](https://msdn.microsoft.com/commandline/wsl/about)
 - GNOME<sup>1</sup>
 - [Hyper](https://hyper.is)
 - [iTerm2](https://www.iterm2.com)
-- macOS Terminal<sup>2</sup>
+- macOS Terminal
 - Pantheon
-- [Windows Bash](https://msdn.microsoft.com/commandline/wsl/about)
 
 ## Text editors
 
 - [Atom](https://atom.io)
-- [Sublime Text](https://www.sublimetext.com)<sup>3</sup>
-- [Visual Studio Code](https://code.visualstudio.com)<sup>4</sup>
+- [Sublime Text](https://www.sublimetext.com)<sup>2</sup>
+- [Visual Studio Code](https://code.visualstudio.com)<sup>3</sup>
 
 ### Notes
 
-1: Profiles must be managed manually.
+1: Profiles must be configured manually.
 
-2: Does not support 24-bit colors.
-
-3: Preferences must be manually copied to either of these locations:
+2: Preferences must be manually copied to either of these locations:
 
 macOS:
 - `~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/`
@@ -55,7 +53,7 @@ Windows:
 - `%APPDATA%\Sublime Text 3\Packages\User\`
 - `%APPDATA%\Sublime Text 2\Packages\User\`
 
-4: Settings must be manually copied to [these locations.](https://code.visualstudio.com/Docs/customization/userandworkspace#_settings-file-locations)
+3: Settings must be manually copied to [these locations.](https://code.visualstudio.com/Docs/customization/userandworkspace#_settings-file-locations)
 
 ## License
 
