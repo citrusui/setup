@@ -2,9 +2,7 @@
   autocrlf = input # Use LF line endings
   editor = "atom --wait" # Use Atom for Git commits
   excludesfile = ~/.gitignore # Set as global gitignore
-
 # Various status color overrides
-
 [color "branch"]
   current = yellow
   local = green
@@ -22,3 +20,5 @@
   untracked = red
 [help]
   autocorrect = 10 # Autocorrect misspelled commands after a 1 second delay
+[push]
+  default = simple # Only push the current branch
