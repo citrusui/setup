@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+function update() {
+  if [ "$(uname)" == "Darwin" ]; then
+    sudo softwareupdate -i -a
+  elif [ "$(which apt)" ]; then
+    sudo apt update
+    sudo apt upgrade
+  fi
+  if [ $NVM_DIR ]; then
+    nvm install stable
+  fi
+  if [ "$(which npm)" ]; then
+    npm update -g
+  fi
+}
+
+export -f update

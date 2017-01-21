@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-# Export aliases, prompt, and extras
+# Export aliases, prompt, extras, and functions
 
-for file in ~/.{aliases,bash_prompt,extra}; do
+for file in ~/.{aliases,bash_prompt,extra,functions}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
