@@ -35,7 +35,7 @@ module.exports = {
     env: {},
     bell: "SOUND",
     copyOnSelect: true,
-    windowSize: [750, 500],
+    windowSize: [660, 430],
   },
   plugins: [],
   localPlugins: []

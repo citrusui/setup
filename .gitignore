@@ -1,3 +1,11 @@
+# Binaries
+
+*.deb
+*.dmg
+*.exe
+*.msi
+*.rpm
+
 # Jekyll
 
 .sass-cache/

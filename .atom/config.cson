@@ -1,7 +1,12 @@
+# More info: https://flight-manual.atom.io/using-atom/sections/basic-customization/
+
 "*":
   core:
+    disabledPackages: [
+      "wrap-guide"
+    ]
     openEmptyEditorOnStart: false
-    telemetryConsent: "no"
+    telemetryConsent: "limited"
     useCustomTitleBar: true
   editor:
     fontFamily: "Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\""

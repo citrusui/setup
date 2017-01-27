@@ -18,6 +18,8 @@ To update, just re-run the setup script:
 source setup/setup.sh
 ```
 
+To skip user confirmation, run with `-y`. **This will overwrite, without warning, any local changes you have made to the preferences in your home folder!**
+
 # Supported apps
 
 ## Terminal emulators
@@ -35,7 +37,7 @@ source setup/setup.sh
 - [Sublime Text](https://www.sublimetext.com)<sup>2</sup>
 - [Visual Studio Code](https://code.visualstudio.com)<sup>3</sup>
 
-### Notes
+### Caveats
 
 1: Profiles must be configured manually.
 

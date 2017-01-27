@@ -1,60 +1,58 @@
 #!/usr/bin/env bash
 
-# See COLORS.md for further explanation
+## `ls` colorized output; see COLORS.md for further explanation
 
 if ls --color > /dev/null 2>&1; then
-  colorflag="--color" # GNU syntax
+  colorflag="--color" # GNU and Linux
   export LS_COLORS="di=1;36:ln=1;32:so=37:pi=1;31;40:ex=35:bd=37:cd=37:su=37:sg=37:tw=32:ow=32"
-else # BSD syntax
+else # BSD and macOS
   colorflag="-G"
   export CLICOLOR=1
   export LSCOLORS="GxCxhxBafxhxhxhxhxcxcx"
 fi
 
-alias ls="ls ${colorflag}" # Enable colors
-alias sh="bash" # Enforce bash
-alias sudo="sudo " # For use with aliases
+## `git status` prompt
 
 prompt() {
   local s="";
   local branchName="";
-  if [ $(git rev-parse --is-inside-work-tree &>/dev/null; echo "${?}") == "0" ]; then # Check for a valid Git repo
-    if [ "$(git rev-parse --is-inside-git-dir 2> /dev/null)" == "false" ]; then # Only run if we're outside .git
-      git update-index --really-refresh -q &>/dev/null; # Update Git index
+  if [ $(git rev-parse --is-inside-work-tree &>/dev/null; echo "${?}") == "0" ]; then # check for a valid Git repository
+    if [ "$(git rev-parse --is-inside-git-dir 2> /dev/null)" == "false" ]; then # abort inside .git directory
+      git update-index --really-refresh -q &>/dev/null;
       if ! $(git diff --quiet --ignore-submodules --cached); then
-        s+="+"; # Uncommited changes
+        s+="+"; # Uncommited changes [+]
       fi;
       if ! $(git diff-files --quiet --ignore-submodules --); then
-        s+="!"; # Unstaged changes
+        s+="!"; # unstaged changes [!]
       fi;
       if [ -n "$(git ls-files --others --exclude-standard)" ]; then
-        s+="?"; # Untracked files
+        s+="?"; # untracked files [?]
       fi;
       if $(git rev-parse --verify refs/stash &>/dev/null); then
-        s+="$"; # Stashed files
+        s+="$"; # stashed files [$]
       fi;
     fi;
 
-# Display current branch name
+# display current branch name
 
-    branchName="$(git symbolic-ref --quiet --short HEAD 2> /dev/null || \
-      git rev-parse --short HEAD 2> /dev/null || \
-      echo "(unknown)")";
+    branchName="$(git symbolic-ref --quiet --short HEAD 2> /dev/null || git rev-parse --short HEAD 2> /dev/null || echo "(unknown)")";
     [ -n "${s}" ] && s=" [${s}]";
-    echo "${1}${branchName}${2}${s}";
+    echo "${1}${branchName}${2}${s}"; # for example, master
   else
     return;
   fi;
 }
 
-# Reset colors
+## color resets
 
 tput sgr0;
 reset=$(tput sgr0);
 
-# macOS Terminal color fallback
+# fallback for Apple Terminal.
+# TODO: check for full color support dynamically.
 
 if [ "$(echo $TERM_PROGRAM)" == "Apple_Terminal" ]; then
+  # these are set in ./setup.terminal
   blue=$(tput setaf 4);
   green=$(tput setaf 2);
   orange=$(tput setaf 9);
@@ -62,7 +60,7 @@ if [ "$(echo $TERM_PROGRAM)" == "Apple_Terminal" ]; then
   violet=$(tput setaf 12);
   white=$(tput setaf 7);
   yellow=$(tput setaf 3);
-else # Full 24-bit color support
+else
   blue="\e[38;2;68;146;191m"; #4ea5d9
   green="\e[38;2;121;206;128m"; #79ce80
   orange="\e[38;2;255;87;45m"; #ff572d
@@ -73,15 +71,15 @@ else # Full 24-bit color support
 fi
 
 if [[ "${USER}" == "root" ]]; then
-  userStyle="${red}"; # Root users are red
+  userStyle="${red}"; # for running as root
 else
-  userStyle="${violet}"; # Violet is for you
+  userStyle="${violet}"; # regular users
 fi;
 if [[ "${SSH_TTY}" ]]; then
-  userStyle="${yellow}"; # SSH is pretty neat
-fi; # `apt-get moo`
+  userStyle="${yellow}"; # running over ssh
+fi;
 
-# Apply prompt
+# apply prompt
 
 PS1="\[\033[1;37m\]";
 PS1+="\n";
@@ -90,7 +88,7 @@ PS1+="\[${green}\]\w";
 PS1+="\$(prompt \" \[${blue}\]\" \"\[${orange}\]\")";
 PS1+="\[${white}\]\n";
 if [[ "${USER}" == "root" ]]; then
-  PS1+="# \[${reset}\]"; # Display octothorp (#)
+  PS1+="# \[${reset}\]"; # for running as root (#)
 else
-  PS1+="$ \[${reset}\]"; # Display dollar sign ($)
+  PS1+="$ \[${reset}\]"; # regular users ($)
 fi;

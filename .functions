@@ -2,16 +2,19 @@
 
 function update() {
   if [ "$(uname)" == "Darwin" ]; then
-    sudo softwareupdate -i -a
+    sudo softwareupdate -ia # fetch latest updates from the Mac App Store
   elif [ "$(which apt)" ]; then
-    sudo apt update
-    sudo apt upgrade
+    sudo apt update # refresh package lists
+    sudo apt upgrade # install updated packages
   fi
   if [ $NVM_DIR ]; then
-    nvm install stable
+    nvm install stable # install the latest Node.js release
   fi
   if [ "$(which npm)" ]; then
-    npm update -g
+    npm update -g # update all global Node modules
+  fi
+  if [ "$(which apm)" ]; then
+    apm update # update Atom packages
   fi
 }
 
