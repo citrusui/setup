@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-alias ..="cd .." # descend one directory
-alias ...="cd ../.." # descend two directories
-alias ls="ls ${colorflag}" # default to `ls` outputting color
-alias sh="bash" # always use bash
-alias sudo="sudo " # fixes problems when running aliases under `sudo`
