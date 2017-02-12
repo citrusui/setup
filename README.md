@@ -5,7 +5,7 @@
 ## Install
 
 ```sh
-git clone https://github.com/citrusui/setup && ./setup/init.sh
+git clone --recursive https://github.com/citrusui/setup && ./setup/init.sh
 ```
 
 To update, just re-run the setup script:
