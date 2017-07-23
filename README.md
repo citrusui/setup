@@ -1,17 +1,21 @@
-# Avery's setup
+# citrusui setup
 
 **Disclaimer:** These settings are not meant for everyone! If you'd like to use these configurations, consider reviewing and/or forking this repository.
+
+---
 
 ## Install
 
 ```sh
-git clone --recursive https://github.com/citrusui/setup && ./setup/init.sh
+git clone --recursive https://github.com/citrusui/setup ~/setup && source ~/setup/init.sh
 ```
+
+> _It's important you don't omit `--recursive` as this repository depends on various smaller repositories._
 
 To update, just re-run the setup script:
 
 ```sh
-./setup/init.sh
+source ~/setup/init.sh
 ```
 
 To skip user confirmation, run with `-y`. **This will overwrite, without warning, any local changes you have made to the preferences in your home folder!**
