@@ -1,11 +1,13 @@
+language: bash
+sudo: required
+addons:
+  apt:
+    packages: shellcheck
 os:
  - linux
  - osx
-sudo: required
-language: node_js
-node_js:
- - stable
 script:
- - ./init.sh
+ - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then shellcheck init.sh; fi
+ - ./init.sh -y
 notifications:
   email: false

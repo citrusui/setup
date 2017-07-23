@@ -19,31 +19,23 @@ function pullSource() {
   unset dir;
 }
 
-function checkSystem() {
-  if [ "$(uname)" == "Darwin" ]; then
-    ~/.macos
-  fi
-  if [ "$(lsb_release -si)" == "elementary" ]; then
-    ~/.pantheon
-  fi
-}
-
 checkTools
 
 cd "$(dirname "${BASH_SOURCE}")";
-echo ""
-echo "Pulling updates..."
-echo ""
+echo -e "\nPulling updates...\n"
 git pull origin master;
 if [ "$1" == "-y" ]; then
   pullSource
+elif [ "$1" == "--force" ]; then
+  echo -e "\n\033[1;31mWARNING: Running script with --force.\033[0m\n"
+  sleep 5
+  pullSource --force
 else
   echo ""
   read -p "This may overwrite your existing preferences. Continue? [y/N] " REPLY
   echo ""
   if [[ "$REPLY" =~ ^([yY][eE][sS]|[yY])+$ ]]; then
     pullSource
-    checkSystem
   else
     echo "Aborted."
   fi
