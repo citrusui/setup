@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-export NVM=nvm
-
 function checkTools() {
   if [ ! "$(which git)" ]; then
     echo "Git is required." # TODO: install these automatically
@@ -13,7 +11,7 @@ function checkTools() {
 }
 
 function pullSource() {
-  for dir in {aliases,atom,bash,functions,git,hyper,macos,pantheon,vscode}; do
+  for dir in {aliases,bash,functions,git,macos,pantheon}; do
     source $dir/init.sh -y; cd ..
   done;
   unset dir;
